@@ -14,10 +14,21 @@ var indoorMaps = indoorMaps({
                 fontStyle: "Verdana",
                 fontSize: "12"
             },
-            door: {
+            doors: [{
                 x: 30,
-                y: 130
-            }
+                y: 130,
+                actual: {
+                    x: 30,
+                    y: 120
+                }
+            }, {
+                x: 10,
+                y: 50,
+                actual: {
+                    x: 20,
+                    y: 50
+                }
+            }]
         },
         {
             id: 2,
@@ -33,10 +44,14 @@ var indoorMaps = indoorMaps({
                 fontStyle: "Verdana",
                 fontSize: "12"
             },
-            door: {
+            doors: [{
                 x: 130,
                 y: 40,
-            }
+                actual: {
+                    x: 140,
+                    y: 40
+                }
+            }]
         },
         {
             id: 3,
@@ -52,10 +67,14 @@ var indoorMaps = indoorMaps({
                 fontStyle: "Verdana",
                 fontSize: "12"
             },
-            door: {
+            doors: [{
                 x: 250,
-                y: 130
-            }
+                y: 130,
+                actual: {
+                    x: 250,
+                    y: 140
+                }
+            }]
         }
     ],
     hallway: [
@@ -63,7 +82,7 @@ var indoorMaps = indoorMaps({
             id: 1,
             x: 10,
             y: 130,
-            connected: [5, 8]
+            connected: [5, 9]
         },
         {
             id: 2,
@@ -105,7 +124,13 @@ var indoorMaps = indoorMaps({
             id: 8,
             x: 10,
             y: 10,
-            connected: [1, 4]
+            connected: [9, 4]
+        },
+        {
+            id: 9,
+            x: 10,
+            y: 50,
+            connected: [1, 8]
         }
     ]
 });

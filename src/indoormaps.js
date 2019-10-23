@@ -21,13 +21,11 @@
         this.parseHallwayPoints(options.hallway || {});
         this.displayHallwayPoints(options.hallway || {});
 
-        //alert(JSON.stringify(options));
-
-        let paths = this.findPaths(2, 3);
+        let paths = this.findPaths(1, 2);
 
         let shortestPath = this.findShortestPath(paths);
 
-        this.drawPath(paths[1]);
+        this.drawPath(shortestPath);
     };
 
     IndoorMaps.init.prototype = {
@@ -54,17 +52,21 @@
         draw: function (node) {
             svgRootNode.append(node);
         },
-        addDoor: function(roomId, coordinates) {
-            doors[roomId] = coordinates;
+        addDoors: function(roomId, doorPoints) {
+            doors[roomId] = doorPoints;
 
-            let point = this.createSvgNode("circle", {
-                cx: coordinates.x,
-                cy: coordinates.y,
-                r: 4,
-                fill: "red"
-            });
+            for (let i = 0; i < doorPoints.length; i++) {
+                let coordinates = doorPoints[i];
 
-            this.draw(point);
+                let point = this.createSvgNode("circle", {
+                    cx: coordinates.x,
+                    cy: coordinates.y,
+                    r: 4,
+                    fill: "red"
+                });
+
+                this.draw(point);
+            }
         },
         drawMap: function (floorSections) {
             for (let i = 0; i < floorSections.length; i++) {
@@ -89,7 +91,7 @@
                 });
 
                 this.draw(node);
-                this.addDoor(section.id, section.door);
+                this.addDoors(section.id, section.doors);
 
                 if (section.label === undefined) {
                     continue;
@@ -129,10 +131,6 @@
                         default:
                             throw "Alignment mode requested was not found.";
                     }
-
-                    if (section.label.alignment === "center|center") {
-
-                    }
                 }
 
                 let textNode = this.createSvgNode("text", attributes, section.label.text);
@@ -142,7 +140,6 @@
         },
 
         drawPath: function(path) {
-            // Line requires an adjacent point, the last doesn't. Hence, points - 1.
             for (let i = 0; i < (path.length - 1); i++) {
                 let lineNode = this.createSvgNode('line', {
                     x1: path[i].x,
@@ -171,20 +168,23 @@
             console.log(hallwayNodes);
         },
         findPaths: function (startId, endId) {
-            console.log(
-                "Start ID: " + JSON.stringify(doors[startId]) + "\n\n"
-                + "End ID: " + JSON.stringify(doors[endId])
-            );
+            let paths = [];
+            let startDoors = doors[startId];
+            let endDoors   = doors[endId];
 
-            console.log(
-                "Starting Point: " + JSON.stringify(this.findPointByCoordinates(doors[startId])) + "\n\n"
-                + "Ending Point: " + JSON.stringify(this.findPointByCoordinates(doors[endId]))
-            );
+            for (let i = 0; i < startDoors.length; i++) {
+                let startingPoint = this.findPointByCoordinates(startDoors[i]);
 
-            let startingPoint = this.findPointByCoordinates(doors[startId]);
-            let endingPoint = this.findPointByCoordinates(doors[endId]);
-            let paths = this.recursiveIterationOfPoints([startingPoint], endingPoint);
+                for (let j = 0; j < doors[endId].length; j++) {
+                    let endingPoint = this.findPointByCoordinates(endDoors[j]);
 
+                    paths = paths.concat(this.recursiveIterationOfPoints([startingPoint], endingPoint));
+                }
+            }
+
+            for (let id in paths) {
+                paths[id] = this.linkRoomsWithPath(paths[id]);
+            }
             return paths;
         },
         recursiveIterationOfPoints: function(path, end) {
@@ -226,6 +226,16 @@
                 }
             }
         },
+        findActualCoordinatesOfDoorByCoordinates: function (coordinates) {
+            for (let id in doors) {
+
+                for (let i = 0; i < doors[id].length; i++) {
+                    if (doors[id][i].x === coordinates.x && doors[id][i].y === coordinates.y) {
+                        return doors[id][i].actual;
+                    }
+                }
+            }
+        },
         parseHallwayPoints: function (points) {
             for (let i = 0; i < points.length; i++) {
                 hallwayPoints[points[i].id] = points[i];
@@ -263,6 +273,15 @@
             console.log(totalDistance);
 
             return totalDistance;
+        },
+        linkRoomsWithPath: function (path) {
+            let first = this.findActualCoordinatesOfDoorByCoordinates(path[0]);
+            let last  = this.findActualCoordinatesOfDoorByCoordinates(path[path.length - 1]);
+
+            path.unshift(first);
+            path.push(last);
+
+            return path;
         }
     };
 
