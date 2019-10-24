@@ -1,4 +1,8 @@
 var indoorMaps = indoorMaps({
+    config: {
+        defaultZIndex: 0,
+        validZIndexes: [0]
+    },
     floorSections: [
         {
             id: 1,
@@ -75,6 +79,29 @@ var indoorMaps = indoorMaps({
                     y: 140
                 }
             }]
+        },
+        {
+            id: 4,
+            x: 500,
+            y: 140,
+            width: 2000,
+            height: 100,
+            backgroundColor: "#000000",
+            label: {
+                color: "rgb(255, 255, 255)",
+                text: "Workspace 2",
+                alignment: "center|center",
+                fontStyle: "Verdana",
+                fontSize: "12"
+            },
+            doors: [{
+                x: 750,
+                y: 130,
+                actual: {
+                    x: 250,
+                    y: 140
+                }
+            }]
         }
     ],
     hallway: [
@@ -135,3 +162,21 @@ var indoorMaps = indoorMaps({
     ]
 });
 
+indoorMaps.addEventListener('wheel', function (e) {
+    let transformationMatrix = this.getAttribute("transform").replace("matrix(", "").replace(")", "").trim().split(" ");
+
+    let deltaZoom = e.wheelDelta / 1800;
+
+    transformationMatrix[0] = Number(transformationMatrix[0]) + deltaZoom;
+    transformationMatrix[3] = Number(transformationMatrix[3]) + deltaZoom;
+
+    if (transformationMatrix[0] <= 0) {
+        transformationMatrix[0] = 0.05;
+    }
+
+    if (transformationMatrix[3] <= 0) {
+        transformationMatrix[3] = 0.05;
+    }
+
+    this.setAttribute("transform", "matrix(" + transformationMatrix.join(" ") + ")");
+});

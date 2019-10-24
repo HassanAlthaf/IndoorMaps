@@ -7,25 +7,41 @@
     let doors = {};
     let hallwayPoints = {};
 
+    let currentZIndex = 0;
+    let validZIndexes = [0];
+
+    let floorPlan = [];
+
     IndoorMaps.init = function (options) {
+        this.parseConfiguration(options || {});
+        this.parseFloorPlan(options.floorSections || {});
+        // Loop through everything and find max width/height required.
+
+        let svgDimensions = this.calculateSVGWidthAndHeight();
+
         // Creating the root SVG Node on DOM.
         svgRootNode = this.createSvgNode("svg", {
-            height: "100%",
-            width: "100%"
+            width: svgDimensions.width, // max width from above
+            height: svgDimensions.height, // max width from above
+            transform: "matrix(1 0 0 1 0 0)"
         });
 
         this.appendToBody(svgRootNode);
 
         // Render the Map
-        this.drawMap(options.floorSections || {});
+        this.drawMap(floorPlan[currentZIndex] || {});
+
+        // Parsing
         this.parseHallwayPoints(options.hallway || {});
         this.displayHallwayPoints(options.hallway || {});
 
+        // Pathfinding
         let paths = this.findPaths(1, 2);
-
         let shortestPath = this.findShortestPath(paths);
 
         this.drawPath(shortestPath);
+
+        return svgRootNode;
     };
 
     IndoorMaps.init.prototype = {
@@ -282,6 +298,57 @@
             path.push(last);
 
             return path;
+        },
+
+        parseConfiguration: function (options) {
+            currentZIndex = options.config.defaultZIndex || 0;
+            validZIndexes = options.config.validZIndexes || [0];
+        },
+
+        parseFloorPlan: function (floorLayout) {
+            for (let i in floorLayout) {
+                if (floorLayout[i].z === undefined) {
+                    floorLayout[i].z = 0;
+                }
+
+                if (!(floorLayout[i].z in floorPlan)) {
+                    floorPlan[floorLayout[i].z] = [];
+                }
+
+                floorPlan[floorLayout[i].z].push(floorLayout[i]);
+            }
+        },
+
+        calculateSVGWidthAndHeight: function () {
+            let dimensions = {
+                width: 0,
+                height: 0
+            };
+
+            let floorLayout = floorPlan[currentZIndex];
+            let first = true;
+
+            for (let i in floorLayout) {
+                let calculatedWidth  = floorLayout[i].width + floorLayout[i].x;
+                let calculatedHeight = floorLayout[i].height + floorLayout[i].y;
+
+                if (first) {
+                     dimensions.width = calculatedWidth;
+                     dimensions.height = calculatedHeight;
+
+                     first = true;
+                }
+
+                if (calculatedWidth > dimensions.width) {
+                    dimensions.width = calculatedWidth;
+                }
+
+                if (calculatedHeight > dimensions.height) {
+                    dimensions.height = calculatedHeight;
+                }
+            }
+
+            return dimensions;
         }
     };
 
