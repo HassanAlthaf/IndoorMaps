@@ -10,6 +10,8 @@
     let currentZIndex = 0;
     let validZIndexes = [0];
 
+    let svgDimensions = {};
+
     let floorPlan = [];
 
     IndoorMaps.init = function (options) {
@@ -17,13 +19,15 @@
         this.parseFloorPlan(options.floorSections || {});
         // Loop through everything and find max width/height required.
 
-        let svgDimensions = this.calculateSVGWidthAndHeight();
+        svgDimensions = this.calculateSVGWidthAndHeight();
 
         // Creating the root SVG Node on DOM.
         svgRootNode = this.createSvgNode("svg", {
             width: svgDimensions.width, // max width from above
-            height: svgDimensions.height, // max width from above
-            transform: "matrix(1 0 0 1 0 0)"
+            height: svgDimensions.height, // max height from above
+            transform: "matrix(1 0 0 1 0 0)",
+            'data-width': svgDimensions.width,
+            'data-height': svgDimensions.height
         });
 
         this.appendToBody(svgRootNode);
@@ -36,7 +40,9 @@
         this.displayHallwayPoints(options.hallway || {});
 
         // Pathfinding
-        let paths = this.findPaths(1, 2);
+
+        let paths = this.findPaths(27, 45);
+
         let shortestPath = this.findShortestPath(paths);
 
         this.drawPath(shortestPath);
@@ -74,14 +80,25 @@
             for (let i = 0; i < doorPoints.length; i++) {
                 let coordinates = doorPoints[i];
 
-                let point = this.createSvgNode("circle", {
-                    cx: coordinates.x,
-                    cy: coordinates.y,
-                    r: 4,
-                    fill: "red"
-                });
+                let attributes = {
+                    x: coordinates.x,
+                    y: coordinates.y,
+                    width: coordinates.width || 3,
+                    height: coordinates.height || 3,
+                    fill: "#FF0000"
+                };
 
-                this.draw(point);
+                if (coordinates.width > coordinates.height) {
+                    attributes.y -= coordinates.height;
+                }
+
+                if (coordinates.height > coordinates.width) {
+                    attributes.x -= coordinates.width;
+                }
+
+                let rect = this.createSvgNode("rect", attributes);
+
+                this.draw(rect);
             }
         },
         drawMap: function (floorSections) {
@@ -123,10 +140,14 @@
                 let attributes = {
                     'x': xCoordinate,
                     'y': yCoordinate,
-                    'fill': section.label.color,
-                    'font-family': section.label.fontStyle,
-                    'font-size': section.label.fontSize
+                    'fill': section.label.color || '#333333',
+                    'font-family': section.label.fontStyle || 'Verdana',
+                    'font-size': section.label.fontSize || '10'
                 };
+
+                if (section.label.alignment === undefined) {
+                    section.label.alignment = "center|center";
+                }
 
                 if (section.label.alignment !== undefined) {
                     switch (section.label.alignment) {
@@ -176,12 +197,13 @@
                         cx: hallwayNodes[i].x,
                         cy: hallwayNodes[i].y,
                         r: 2,
-                        fill: "black"
+                        fill: hallwayNodes[i].fill || "black",
+                        'data-id': hallwayNodes[i].id
                     })
                 );
             }
 
-            console.log(hallwayNodes);
+
         },
         findPaths: function (startId, endId) {
             let paths = [];
@@ -199,8 +221,9 @@
             }
 
             for (let id in paths) {
-                paths[id] = this.linkRoomsWithPath(paths[id]);
+                paths[id] = this.linkRoomsWithPath(paths[id], startId, endId);
             }
+
             return paths;
         },
         recursiveIterationOfPoints: function(path, end) {
@@ -242,7 +265,15 @@
                 }
             }
         },
-        findActualCoordinatesOfDoorByCoordinates: function (coordinates) {
+        findActualCoordinatesOfDoorByCoordinates: function (coordinates, roomId) {
+            let validDoors = doors[roomId];
+
+            for (let id in validDoors) {
+                if (validDoors[id].x === coordinates.x && validDoors[id].y === coordinates.y) {
+                    return validDoors[id].actual;
+                }
+            }
+            /*
             for (let id in doors) {
 
                 for (let i = 0; i < doors[id].length; i++) {
@@ -250,7 +281,7 @@
                         return doors[id][i].actual;
                     }
                 }
-            }
+            }*/
         },
         parseHallwayPoints: function (points) {
             for (let i = 0; i < points.length; i++) {
@@ -286,13 +317,11 @@
                 totalDistance += Math.sqrt(Math.pow(path[i].x - path[i + 1].x, 2) + Math.pow(path[i].y - path[i + 1].y, 2));
             }
 
-            console.log(totalDistance);
-
             return totalDistance;
         },
-        linkRoomsWithPath: function (path) {
-            let first = this.findActualCoordinatesOfDoorByCoordinates(path[0]);
-            let last  = this.findActualCoordinatesOfDoorByCoordinates(path[path.length - 1]);
+        linkRoomsWithPath: function (path, startId, endId) {
+            let first = this.findActualCoordinatesOfDoorByCoordinates(path[0], startId);
+            let last  = this.findActualCoordinatesOfDoorByCoordinates(path[path.length - 1], endId);
 
             path.unshift(first);
             path.push(last);
@@ -336,12 +365,14 @@
                      dimensions.width = calculatedWidth;
                      dimensions.height = calculatedHeight;
 
-                     first = true;
+                     first = false;
                 }
 
                 if (calculatedWidth > dimensions.width) {
+
                     dimensions.width = calculatedWidth;
                 }
+
 
                 if (calculatedHeight > dimensions.height) {
                     dimensions.height = calculatedHeight;
