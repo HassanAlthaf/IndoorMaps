@@ -418,11 +418,13 @@ var indoorMaps = indoorMaps({
                 text: "Moonstone - Conference Room 6",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1480,
+                y: 520,
+                width: 50,
+                height: 3,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1480,
+                    y: 520
                 }
             }]
         },
@@ -439,11 +441,13 @@ var indoorMaps = indoorMaps({
                 text: "Pantry",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 57.5,
+                y: 520,
+                width: 35,
+                height: 3,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 57.5,
+                    y: 520
                 }
             }]
         },
@@ -672,11 +676,11 @@ var indoorMaps = indoorMaps({
                 text: "A039",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 695,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 695,
+                    y: 410
                 }
             }]
         },
@@ -693,11 +697,11 @@ var indoorMaps = indoorMaps({
                 text: "A040",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 765,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 765,
+                    y: 410
                 }
             }]
         },
@@ -714,11 +718,11 @@ var indoorMaps = indoorMaps({
                 text: "A041",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 835,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 835,
+                    y: 410
                 }
             }]
         },
@@ -735,11 +739,11 @@ var indoorMaps = indoorMaps({
                 text: "A042",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 905,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 905,
+                    y: 410
                 }
             }]
         },
@@ -756,11 +760,11 @@ var indoorMaps = indoorMaps({
                 text: "A043",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 975,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 975,
+                    y: 410
                 }
             }]
         },
@@ -840,11 +844,11 @@ var indoorMaps = indoorMaps({
                 text: "A020",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1115,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1115,
+                    y: 410
                 }
             }]
         },
@@ -861,11 +865,11 @@ var indoorMaps = indoorMaps({
                 text: "A021",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1185,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1185,
+                    y: 410
                 }
             }]
         },
@@ -882,11 +886,11 @@ var indoorMaps = indoorMaps({
                 text: "A022",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1255,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1255,
+                    y: 410
                 }
             }]
         },
@@ -945,11 +949,11 @@ var indoorMaps = indoorMaps({
                 text: "A047",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 695,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 695,
+                    y: 440
                 }
             }]
         },
@@ -966,11 +970,11 @@ var indoorMaps = indoorMaps({
                 text: "A046",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 765,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 765,
+                    y: 440
                 }
             }]
         },
@@ -987,11 +991,11 @@ var indoorMaps = indoorMaps({
                 text: "A045",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 905,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 905,
+                    y: 440
                 }
             }]
         },
@@ -1008,11 +1012,11 @@ var indoorMaps = indoorMaps({
                 text: "A044",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 975,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 975,
+                    y: 440
                 }
             }]
         },
@@ -1029,11 +1033,11 @@ var indoorMaps = indoorMaps({
                 text: "A019",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1115,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1115,
+                    y: 440
                 }
             }]
         },
@@ -1050,11 +1054,11 @@ var indoorMaps = indoorMaps({
                 text: "A018",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1185,
+                y: 425,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1185,
+                    y: 440
                 }
             }]
         },
@@ -1071,11 +1075,13 @@ var indoorMaps = indoorMaps({
                 text: "Door",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 40,
+                y: 590,
+                width: 3,
+                height: 120,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 40,
+                    y: 590
                 }
             }]
         },
@@ -1092,11 +1098,13 @@ var indoorMaps = indoorMaps({
                 text: "Door",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1740,
+                y: 590,
+                width: 3,
+                height: 120,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1740,
+                    y: 590
                 }
             }]
         },
@@ -1113,11 +1121,13 @@ var indoorMaps = indoorMaps({
                 text: "ORION - Meeting Room 13",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 350,
+                y: 875,
+                height: 50,
+                width: 3,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 350,
+                    y: 875
                 }
             }]
         },
@@ -1281,11 +1291,11 @@ var indoorMaps = indoorMaps({
                 text: "A131",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1455,
+                y: 650,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1455,
+                    y: 660
                 }
             }]
         },
@@ -1302,11 +1312,11 @@ var indoorMaps = indoorMaps({
                 text: "A132",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1525,
+                y: 650,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1525,
+                    y: 660
                 }
             }]
         },
@@ -1323,11 +1333,11 @@ var indoorMaps = indoorMaps({
                 text: "A133",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1595,
+                y: 650,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1595,
+                    y: 660
                 }
             }]
         },
@@ -1344,11 +1354,11 @@ var indoorMaps = indoorMaps({
                 text: "A134",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1665,
+                y: 650,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1665,
+                    y: 660
                 }
             }]
         },
@@ -1365,11 +1375,11 @@ var indoorMaps = indoorMaps({
                 text: "A138",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1455,
+                y: 750,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1455,
+                    y: 760
                 }
             }]
         },
@@ -1386,11 +1396,11 @@ var indoorMaps = indoorMaps({
                 text: "A137",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1525,
+                y: 750,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1525,
+                    y: 760
                 }
             }]
         },
@@ -1407,11 +1417,11 @@ var indoorMaps = indoorMaps({
                 text: "A136",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1595,
+                y: 750,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1595,
+                    y: 760
                 }
             }]
         },
@@ -1428,263 +1438,11 @@ var indoorMaps = indoorMaps({
                 text: "A135",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1665,
+                y: 750,
                 actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 65,
-            x: 1420,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A138",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 66,
-            x: 1490,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A137",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 67,
-            x: 1560,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A136",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 68,
-            x: 1630,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A135",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 65,
-            x: 1420,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A138",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 66,
-            x: 1490,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A137",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 67,
-            x: 1560,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A136",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 68,
-            x: 1630,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A135",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 65,
-            x: 1420,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A138",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 66,
-            x: 1490,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A137",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 67,
-            x: 1560,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A136",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
-                }
-            }]
-        },
-        {
-            id: 68,
-            x: 1630,
-            y: 760,
-            z: 0,
-            width: 70,
-            height: 80,
-            backgroundColor: "#03A9F4",
-            label: {
-                color: "rgb(255, 255, 255)",
-                text: "A135",
-            },
-            doors: [{
-                x: 30,
-                y: 130,
-                actual: {
-                    x: 30,
-                    y: 120
+                    x: 1665,
+                    y: 760
                 }
             }]
         },
@@ -1701,11 +1459,11 @@ var indoorMaps = indoorMaps({
                 text: "A139",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1455,
+                y: 930,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1455,
+                    y: 920
                 }
             }]
         },
@@ -1722,11 +1480,11 @@ var indoorMaps = indoorMaps({
                 text: "A140",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1525,
+                y: 930,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1525,
+                    y: 920
                 }
             }]
         },
@@ -1743,11 +1501,11 @@ var indoorMaps = indoorMaps({
                 text: "A141",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1595,
+                y: 930,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1595,
+                    y: 920
                 }
             }]
         },
@@ -1764,11 +1522,11 @@ var indoorMaps = indoorMaps({
                 text: "A142",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1665,
+                y: 930,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1665,
+                    y: 920
                 }
             }]
         },
@@ -1785,11 +1543,11 @@ var indoorMaps = indoorMaps({
                 text: "A146",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1455,
+                y: 930,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1455,
+                    y: 940
                 }
             }]
         },
@@ -1806,11 +1564,11 @@ var indoorMaps = indoorMaps({
                 text: "A145",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1525,
+                y: 930,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1525,
+                    y: 940
                 }
             }]
         },
@@ -1827,11 +1585,11 @@ var indoorMaps = indoorMaps({
                 text: "A144",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1595,
+                y: 930,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1595,
+                    y: 940
                 }
             }]
         },
@@ -1848,11 +1606,11 @@ var indoorMaps = indoorMaps({
                 text: "A143",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1665,
+                y: 930,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1665,
+                    y: 940
                 }
             }]
         },
@@ -2373,11 +2131,11 @@ var indoorMaps = indoorMaps({
                 text: "A089",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 485,
+                y: 590,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 485,
+                    y: 610
                 }
             }]
         },
@@ -2394,11 +2152,11 @@ var indoorMaps = indoorMaps({
                 text: "A090",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 555,
+                y: 590,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 555,
+                    y: 610
                 }
             }]
         },
@@ -2415,11 +2173,11 @@ var indoorMaps = indoorMaps({
                 text: "A091",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 695,
+                y: 590,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 695,
+                    y: 610
                 }
             }]
         },
@@ -2436,11 +2194,11 @@ var indoorMaps = indoorMaps({
                 text: "A092",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 765,
+                y: 590,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 765,
+                    y: 610
                 }
             }]
         },
@@ -2457,11 +2215,11 @@ var indoorMaps = indoorMaps({
                 text: "A093",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 835,
+                y: 590,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 835,
+                    y: 610
                 }
             }]
         },
@@ -2478,11 +2236,11 @@ var indoorMaps = indoorMaps({
                 text: "A108",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 905,
+                y: 590,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 905,
+                    y: 610
                 }
             }]
         },
@@ -2499,11 +2257,11 @@ var indoorMaps = indoorMaps({
                 text: "A109",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 975,
+                y: 590,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 975,
+                    y: 610
                 }
             }]
         },
@@ -2520,11 +2278,11 @@ var indoorMaps = indoorMaps({
                 text: "A110",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1115,
+                y: 590,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1115,
+                    y: 610
                 }
             }]
         },
@@ -2541,11 +2299,11 @@ var indoorMaps = indoorMaps({
                 text: "A111",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1185,
+                y: 590,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1185,
+                    y: 610
                 }
             }]
         },
@@ -2562,11 +2320,11 @@ var indoorMaps = indoorMaps({
                 text: "A112",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1255,
+                y: 590,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1255,
+                    y: 610
                 }
             }]
         },
@@ -2583,11 +2341,11 @@ var indoorMaps = indoorMaps({
                 text: "A088",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 485,
+                y: 700,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 485,
+                    y: 710
                 }
             }]
         },
@@ -2604,11 +2362,11 @@ var indoorMaps = indoorMaps({
                 text: "A087",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 555,
+                y: 700,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 555,
+                    y: 710
                 }
             }]
         },
@@ -2625,11 +2383,11 @@ var indoorMaps = indoorMaps({
                 text: "A096",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 695,
+                y: 700,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 695,
+                    y: 710
                 }
             }]
         },
@@ -2646,11 +2404,11 @@ var indoorMaps = indoorMaps({
                 text: "A095",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 765,
+                y: 700,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 765,
+                    y: 710
                 }
             }]
         },
@@ -2667,11 +2425,11 @@ var indoorMaps = indoorMaps({
                 text: "A094",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 835,
+                y: 700,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 835,
+                    y: 710
                 }
             }]
         },
@@ -2688,11 +2446,11 @@ var indoorMaps = indoorMaps({
                 text: "A107",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 905,
+                y: 700,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 905,
+                    y: 710
                 }
             }]
         },
@@ -2709,11 +2467,11 @@ var indoorMaps = indoorMaps({
                 text: "A106",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 975,
+                y: 700,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 975,
+                    y: 710
                 }
             }]
         },
@@ -2730,11 +2488,11 @@ var indoorMaps = indoorMaps({
                 text: "A115",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1115,
+                y: 700,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1115,
+                    y: 710
                 }
             }]
         },
@@ -2751,11 +2509,11 @@ var indoorMaps = indoorMaps({
                 text: "A114",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1185,
+                y: 700,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1185,
+                    y: 710
                 }
             }]
         },
@@ -2772,11 +2530,11 @@ var indoorMaps = indoorMaps({
                 text: "A113",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1255,
+                y: 700,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1255,
+                    y: 710
                 }
             }]
         },
@@ -2793,11 +2551,11 @@ var indoorMaps = indoorMaps({
                 text: "A085",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 485,
+                y: 880,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 485,
+                    y: 870
                 }
             }]
         },
@@ -2814,11 +2572,11 @@ var indoorMaps = indoorMaps({
                 text: "A086",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 555,
+                y: 880,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 555,
+                    y: 870
                 }
             }]
         },
@@ -2835,11 +2593,11 @@ var indoorMaps = indoorMaps({
                 text: "A097",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 695,
+                y: 880,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 695,
+                    y: 870
                 }
             }]
         },
@@ -2856,11 +2614,11 @@ var indoorMaps = indoorMaps({
                 text: "A098",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 765,
+                y: 880,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 765,
+                    y: 870
                 }
             }]
         },
@@ -2877,11 +2635,11 @@ var indoorMaps = indoorMaps({
                 text: "A099",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 835,
+                y: 880,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 835,
+                    y: 870
                 }
             }]
         },
@@ -2898,11 +2656,11 @@ var indoorMaps = indoorMaps({
                 text: "A104",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 905,
+                y: 880,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 905,
+                    y: 870
                 }
             }]
         },
@@ -2919,11 +2677,11 @@ var indoorMaps = indoorMaps({
                 text: "A105",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 975,
+                y: 880,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 975,
+                    y: 870
                 }
             }]
         },
@@ -2940,11 +2698,11 @@ var indoorMaps = indoorMaps({
                 text: "A116",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1115,
+                y: 880,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1115,
+                    y: 870
                 }
             }]
         },
@@ -2961,11 +2719,11 @@ var indoorMaps = indoorMaps({
                 text: "A117",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1185,
+                y: 880,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1185,
+                    y: 870
                 }
             }]
         },
@@ -2982,11 +2740,11 @@ var indoorMaps = indoorMaps({
                 text: "A118",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1255,
+                y: 880,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1255,
+                    y: 870
                 }
             }]
         },
@@ -3003,11 +2761,11 @@ var indoorMaps = indoorMaps({
                 text: "A084",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 485,
+                y: 980,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 485,
+                    y: 970
                 }
             }]
         },
@@ -3024,11 +2782,11 @@ var indoorMaps = indoorMaps({
                 text: "A083",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 555,
+                y: 980,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 555,
+                    y: 970
                 }
             }]
         },
@@ -3045,11 +2803,11 @@ var indoorMaps = indoorMaps({
                 text: "A100",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 695,
+                y: 980,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 695,
+                    y: 970
                 }
             }]
         },
@@ -3066,11 +2824,11 @@ var indoorMaps = indoorMaps({
                 text: "A101",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 765,
+                y: 980,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 765,
+                    y: 970
                 }
             }]
         },
@@ -3087,11 +2845,11 @@ var indoorMaps = indoorMaps({
                 text: "A103",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 905,
+                y: 980,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 905,
+                    y: 970
                 }
             }]
         },
@@ -3108,11 +2866,11 @@ var indoorMaps = indoorMaps({
                 text: "A102",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 975,
+                y: 980,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 975,
+                    y: 970
                 }
             }]
         },
@@ -3129,11 +2887,11 @@ var indoorMaps = indoorMaps({
                 text: "A120",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1115,
+                y: 980,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1115,
+                    y: 970
                 }
             }]
         },
@@ -3150,11 +2908,11 @@ var indoorMaps = indoorMaps({
                 text: "A119",
             },
             doors: [{
-                x: 30,
-                y: 130,
+                x: 1185,
+                y: 980,
                 actual: {
-                    x: 30,
-                    y: 120
+                    x: 1185,
+                    y: 970
                 }
             }]
         },
@@ -5930,7 +5688,7 @@ var indoorMaps = indoorMaps({
             id: 35,
             x: 625,
             y: 245,
-            connected: [34, 36]
+            connected: [34, 36, 55]
         },
         {
             id: 36,
@@ -5966,7 +5724,7 @@ var indoorMaps = indoorMaps({
             id: 41,
             x: 1045,
             y: 245,
-            connected: [40, 42, 23]
+            connected: [40, 42, 23, 61]
         },
         {
             id: 42,
@@ -5990,7 +5748,7 @@ var indoorMaps = indoorMaps({
             id: 45,
             x: 1325,
             y: 245,
-            connected: [44, 28]
+            connected: [44, 28, 65]
         },
         {
             id: 46,
@@ -6032,7 +5790,7 @@ var indoorMaps = indoorMaps({
             id: 52,
             x: 382.5,
             y: 425,
-            connected: [7, 52, 53]
+            connected: [7, 53, 67]
         },
         {
             id: 53,
@@ -6044,7 +5802,595 @@ var indoorMaps = indoorMaps({
             id: 54,
             x: 555,
             y: 425,
-            connected: [53]
+            connected: [53, 55]
+        },
+        {
+            id: 55,
+            x: 625,
+            y: 425,
+            connected: [54, 35, 70]
+        },
+        {
+            id: 56,
+            x: 695,
+            y: 425,
+            connected: [55, 57]
+        },
+        {
+            id: 57,
+            x: 765,
+            y: 425,
+            connected: [56, 58]
+        },
+        {
+            id: 58,
+            x: 835,
+            y: 425,
+            connected: [57, 59, 71]
+        },
+        {
+            id: 59,
+            x: 905,
+            y: 425,
+            connected: [58, 60]
+        },
+        {
+            id: 60,
+            x: 975,
+            y: 425,
+            connected: [59, 61]
+        },
+        {
+            id: 61,
+            x: 1045,
+            y: 425,
+            connected: [60, 62, 41, 72]
+        },
+        {
+            id: 62,
+            x: 1115,
+            y: 425,
+            connected: [61, 63]
+        },
+        {
+            id: 63,
+            x: 1185,
+            y: 425,
+            connected: [62, 64]
+        },
+        {
+            id: 64,
+            x: 1255,
+            y: 425,
+            connected: [63, 65]
+        },
+        {
+            id: 65,
+            x: 1325,
+            y: 425,
+            connected: [64, 45, 73]
+        },
+        {
+            id: 66,
+            x: 40,
+            y: 590,
+            connected: [68]
+        },
+        {
+            id: 67,
+            x: 382.5,
+            y: 590,
+            connected: [68, 52, 77, 86]
+        },
+        {
+            id: 68,
+            x: 57.5,
+            y: 590,
+            connected: [66, 67, 69]
+        },
+        {
+            id: 69,
+            x: 57.5,
+            y: 520,
+            connected: [68]
+        },
+        {
+            id: 70,
+            x: 625,
+            y: 590,
+            connected: [55, 78, 79, 89]
+        },
+        {
+            id: 71,
+            x: 835,
+            y: 590,
+            connected: [81, 58, 80]
+        },
+        {
+            id: 72,
+            x: 1045,
+            y: 590,
+            connected: [61, 82, 83, 95]
+        },
+        {
+            id: 73,
+            x: 1325,
+            y: 590,
+            connected: [130, 65, 85, 134]
+        },
+        {
+            id: 74,
+            x: 1480,
+            y: 590,
+            connected: [130, 75, 131]
+        },
+        {
+            id: 75,
+            x: 1480,
+            y: 520,
+            connected: [74]
+        },
+        {
+            id: 76,
+            x: 1740,
+            y: 590,
+            connected: [139]
+        },
+        {
+            id: 77,
+            x: 485,
+            y: 590,
+            connected: [67, 78]
+        },
+        {
+            id: 78,
+            x: 555,
+            y: 590,
+            connected: [77, 70]
+        },
+        {
+            id: 79,
+            x: 695,
+            y: 590,
+            connected: [70, 80]
+        },
+        {
+            id: 80,
+            x: 765,
+            y: 590,
+            connected: [79, 71]
+        },
+        {
+            id: 81,
+            x: 905,
+            y: 590,
+            connected: [71, 82]
+        },
+        {
+            id: 82,
+            x: 975,
+            y: 590,
+            connected: [81, 72]
+        },
+        {
+            id: 83,
+            x: 1115,
+            y: 590,
+            connected: [72, 84]
+        },
+        {
+            id: 84,
+            x: 1185,
+            y: 590,
+            connected: [83, 85]
+        },
+        {
+            id: 85,
+            x: 1255,
+            y: 590,
+            connected: [84, 73]
+        },
+        {
+            id: 86,
+            x: 382.5,
+            y: 700,
+            connected: [67, 100]
+        },
+        {
+            id: 87,
+            x: 485,
+            y: 700,
+            connected: [86, 88]
+        },
+        {
+            id: 88,
+            x: 555,
+            y: 700,
+            connected: [87, 89]
+        },
+        {
+            id: 89,
+            x: 625,
+            y: 700,
+            connected: [88, 90, 70, 104]
+        },
+        {
+            id: 90,
+            x: 695,
+            y: 700,
+            connected: [89, 91]
+        },
+        {
+            id: 91,
+            x: 765,
+            y: 700,
+            connected: [90, 92]
+        },
+        {
+            id: 92,
+            x: 835,
+            y: 700,
+            connected: [91, 93]
+        },
+        {
+            id: 93,
+            x: 905,
+            y: 700,
+            connected: [92, 94]
+        },
+        {
+            id: 94,
+            x: 975,
+            y: 700,
+            connected: [93, 95]
+        },
+        {
+            id: 95,
+            x: 1045,
+            y: 700,
+            connected: [94, 96, 72, 111]
+        },
+        {
+            id: 96,
+            x: 1115,
+            y: 700,
+            connected: [95, 97]
+        },
+        {
+            id: 97,
+            x: 1185,
+            y: 700,
+            connected: [96, 98]
+        },
+        {
+            id: 98,
+            x: 1255,
+            y: 700,
+            connected: [97, 99]
+        },
+        {
+            id: 99,
+            x: 1325,
+            y: 700,
+            connected: [98, 134, 141]
+        },
+        {
+            id: 100,
+            x: 382.5,
+            y: 875,
+            connected: [86, 101, 105]
+        },
+        {
+            id: 101,
+            x: 382.5,
+            y: 880,
+            connected: [100, 102, 116]
+        },
+        {
+            id: 102,
+            x: 485,
+            y: 880,
+            connected: [101, 103]
+        },
+        {
+            id: 103,
+            x: 555,
+            y: 880,
+            connected: [102, 104]
+        },
+        {
+            id: 104,
+            x: 625,
+            y: 880,
+            connected: [103, 89, 106, 120]
+        },
+        {
+            id: 105,
+            x: 350,
+            y: 875,
+            connected: [100]
+        },
+        {
+            id: 106,
+            x: 695,
+            y: 880,
+            connected: [104, 107]
+        },
+        {
+            id: 107,
+            x: 765,
+            y: 880,
+            connected: [106, 108]
+        },
+        {
+            id: 108,
+            x: 835,
+            y: 880,
+            connected: [107, 109, 122]
+        },
+        {
+            id: 109,
+            x: 905,
+            y: 880,
+            connected: [108, 110]
+        },
+        {
+            id: 110,
+            x: 975,
+            y: 880,
+            connected: [109, 111]
+        },
+        {
+            id: 111,
+            x: 1045,
+            y: 880,
+            connected: [110, 112, 95, 125]
+        },
+        {
+            id: 112,
+            x: 1115,
+            y: 880,
+            connected: [111, 113]
+        },
+        {
+            id: 113,
+            x: 1185,
+            y: 880,
+            connected: [112, 114]
+        },
+        {
+            id: 114,
+            x: 1255,
+            y: 880,
+            connected: [113, 115, 128]
+        },
+        {
+            id: 115,
+            x: 1325,
+            y: 880,
+            connected: [114, 141, 147]
+        },
+        {
+            id: 116,
+            x: 382.5,
+            y: 980,
+            connected: [101, 117]
+        },
+        {
+            id: 117,
+            x: 485,
+            y: 980,
+            connected: [116, 118]
+        },
+        {
+            id: 118,
+            x: 555,
+            y: 980,
+            connected: [117, 119]
+        },
+        {
+            id: 119,
+            x: 625,
+            y: 980,
+            connected: [118, 120]
+        },
+        {
+            id: 120,
+            x: 695,
+            y: 980,
+            connected: [119, 104, 121]
+        },
+        {
+            id: 121,
+            x: 765,
+            y: 980,
+            connected: [120, 122]
+        },
+        {
+            id: 122,
+            x: 835,
+            y: 980,
+            connected: [121, 123, 108]
+        },
+        {
+            id: 123,
+            x: 905,
+            y: 980,
+            connected: [122, 124]
+        },
+        {
+            id: 124,
+            x: 975,
+            y: 980,
+            connected: [123, 125]
+        },
+        {
+            id: 125,
+            x: 1045,
+            y: 980,
+            connected: [111, 124, 126]
+        },
+        {
+            id: 126,
+            x: 1115,
+            y: 980,
+            connected: [125, 127]
+        },
+        {
+            id: 127,
+            x: 1185,
+            y: 980,
+            connected: [126, 128]
+        },
+        {
+            id: 128,
+            x: 1255,
+            y: 980,
+            connected: [127, 129, 114]
+        },
+        {
+            id: 129,
+            x: 1325,
+            y: 980,
+            connected: [128, 147]
+        },
+        {
+            id: 130,
+            x: 1455,
+            y: 590,
+            connected: [73, 74, 135]
+        },
+        {
+            id: 131,
+            x: 1525,
+            y: 590,
+            connected: [74, 132, 136]
+        },
+        {
+            id: 132,
+            x: 1595,
+            y: 590,
+            connected: [131, 133, 137]
+        },
+        {
+            id: 133,
+            x: 1665,
+            y: 590,
+            connected: [132, 139, 138]
+        },
+        {
+            id: 134,
+            x: 1325,
+            y: 650,
+            connected: [73, 99, 135]
+        },
+        {
+            id: 135,
+            x: 1455,
+            y: 650,
+            connected: [134, 136, 130]
+        },
+        {
+            id: 136,
+            x: 1525,
+            y: 650,
+            connected: [135, 137, 131]
+        },
+        {
+            id: 137,
+            x: 1595,
+            y: 650,
+            connected: [136, 138, 132]
+        },
+        {
+            id: 138,
+            x: 1665,
+            y: 650,
+            connected: [137, 133, 140]
+        },
+        {
+            id: 139,
+            x: 1720,
+            y: 590,
+            connected: [140, 133, 76]
+        },
+        {
+            id: 140,
+            x: 1720,
+            y: 650,
+            connected: [138, 139, 146]
+        },
+        {
+            id: 141,
+            x: 1325,
+            y: 750,
+            connected: [99, 115, 142]
+        },
+        {
+            id: 142,
+            x: 1455,
+            y: 750,
+            connected: [141, 143]
+        },
+        {
+            id: 143,
+            x: 1525,
+            y: 750,
+            connected: [142, 144]
+        },
+        {
+            id: 144,
+            x: 1595,
+            y: 750,
+            connected: [143, 145]
+        },
+        {
+            id: 145,
+            x: 1665,
+            y: 750,
+            connected: [144, 146]
+        },
+        {
+            id: 146,
+            x: 1720,
+            y: 750,
+            connected: [145, 140, 152]
+        },
+        {
+            id: 147,
+            x: 1325,
+            y: 930,
+            connected: [148, 115, 129]
+        },
+        {
+            id: 148,
+            x: 1455,
+            y: 930,
+            connected: [147, 149]
+        },
+        {
+            id: 149,
+            x: 1525,
+            y: 930,
+            connected: [148, 150]
+        },
+        {
+            id: 150,
+            x: 1595,
+            y: 930,
+            connected: [149, 151]
+        },
+        {
+            id: 151,
+            x: 1665,
+            y: 930,
+            connected: [150, 152]
+        },
+        {
+            id: 152,
+            x: 1720,
+            y: 930,
+            connected: [151, 146]
         }
     ]
 });
@@ -6075,3 +6421,5 @@ var indoorMaps = indoorMaps({
 var panZoomTiger = svgPanZoom(indoorMaps, {
     minZoom: 0.3
 });
+
+//52, 86

@@ -14,20 +14,23 @@
 
     let floorPlan = [];
 
+    let mapSelection = null;
+
     IndoorMaps.init = function (options) {
         this.parseConfiguration(options || {});
         this.parseFloorPlan(options.floorSections || {});
+        this.parseHallwayPoints(options.hallway || {});
         // Loop through everything and find max width/height required.
 
         svgDimensions = this.calculateSVGWidthAndHeight();
 
         // Creating the root SVG Node on DOM.
         svgRootNode = this.createSvgNode("svg", {
-            width: svgDimensions.width, // max width from above
-            height: svgDimensions.height, // max height from above
-            transform: "matrix(1 0 0 1 0 0)",
-            'data-width': svgDimensions.width,
-            'data-height': svgDimensions.height
+            /*
+            width: svgDimensions.width + 5, // max width from above
+            height: svgDimensions.height + 5, // max height from above*/
+            width: '100%',
+            height: '100%'
         });
 
         this.appendToBody(svgRootNode);
@@ -36,17 +39,18 @@
         this.drawMap(floorPlan[currentZIndex] || {});
 
         // Parsing
-        this.parseHallwayPoints(options.hallway || {});
+
         this.displayHallwayPoints(options.hallway || {});
 
         // Pathfinding
 
-        let paths = this.findPaths(27, 45);
+        /*
+        let paths = this.findPaths(52, 53);
 
         let shortestPath = this.findShortestPath(paths);
 
         this.drawPath(shortestPath);
-
+        */
         return svgRootNode;
     };
 
@@ -72,7 +76,13 @@
             window.document.body.appendChild(node);
         },
         draw: function (node) {
-            svgRootNode.append(node);
+            let panZoom = svgRootNode.querySelector('.svg-pan-zoom_viewport');
+
+            if (!panZoom) {
+                svgRootNode.append(node);
+            } else {
+                panZoom.append(node);
+            }
         },
         addDoors: function(roomId, doorPoints) {
             doors[roomId] = doorPoints;
@@ -89,11 +99,13 @@
                 };
 
                 if (coordinates.width > coordinates.height) {
+                    attributes.x -= coordinates.width / 2;
                     attributes.y -= coordinates.height;
                 }
 
                 if (coordinates.height > coordinates.width) {
                     attributes.x -= coordinates.width;
+                    attributes.y -= coordinates.height / 2;
                 }
 
                 let rect = this.createSvgNode("rect", attributes);
@@ -121,6 +133,26 @@
                     width: section.width,
                     height: section.height,
                     fill: section.backgroundColor || "#EEEEEE"
+                });
+
+                let thisObject = this;
+
+                node.addEventListener("click", function (e) {
+                    if (mapSelection === null) {
+                        thisObject.removeRouteIndicators();
+                        mapSelection = this;
+                        this.classList.add('selected');
+                    } else {
+                        console.log(mapSelection.dataset.id + " : " + this.dataset.id);
+                        let paths = thisObject.findPaths(mapSelection.dataset.id, this.dataset.id);
+
+                        let shortestPath = thisObject.findShortestPath(paths);
+
+                        thisObject.drawPath(shortestPath);
+
+                        mapSelection = null;
+                        this.classList.add('destination');
+                    }
                 });
 
                 this.draw(node);
@@ -183,10 +215,36 @@
                     y1: path[i].y,
                     x2: path[i + 1].x,
                     y2: path[i + 1].y,
-                    stroke: "green"
+                    stroke: "green",
+                    'data-type': "route"
                 });
 
                 this.draw(lineNode);
+            }
+        },
+
+        removeRouteIndicators: function () {
+            let nodes = svgRootNode.querySelectorAll('[data-type="route"]');
+            let panZoom = svgRootNode.querySelector('.svg-pan-zoom_viewport');
+
+            for (let index = 0; index < nodes.length; index++) {
+                if (!panZoom) {
+                    svgRootNode.removeChild(nodes[index]);
+                } else {
+                    panZoom.removeChild(nodes[index]);
+                }
+            }
+
+            nodes = svgRootNode.getElementsByClassName('selected');
+
+            for (let index = 0; index < nodes.length; index++) {
+                nodes[index].classList.remove('selected');
+            }
+
+            nodes = svgRootNode.getElementsByClassName('destination');
+
+            for (let index = 0; index < nodes.length; index++) {
+                nodes[index].classList.remove('destination');
             }
         },
 
@@ -212,11 +270,17 @@
 
             for (let i = 0; i < startDoors.length; i++) {
                 let startingPoint = this.findPointByCoordinates(startDoors[i]);
+                console.log("Starting Point: " + JSON.stringify(startingPoint));
 
                 for (let j = 0; j < doors[endId].length; j++) {
                     let endingPoint = this.findPointByCoordinates(endDoors[j]);
+                    console.log("Ending Point: " + JSON.stringify(endingPoint));
 
-                    paths = paths.concat(this.recursiveIterationOfPoints([startingPoint], endingPoint));
+                    let potentialPath = this.recursiveIterationOfPoints([startingPoint], endingPoint);
+
+                    console.log(potentialPath);
+
+                    paths = paths.concat(potentialPath);
                 }
             }
 
@@ -229,6 +293,8 @@
         recursiveIterationOfPoints: function(path, end) {
             let results = [];
             let current = path[path.length - 1];
+
+            console.log(current);
 
             if (current.id === end.id) {
                 return [path];
@@ -250,6 +316,8 @@
 
                 var newPath = path.slice();
                 newPath.push(nextPoint);
+
+                //console.log(nextPoint.id);
 
                 results = results.concat(this.recursiveIterationOfPoints(newPath, end));
             }
@@ -377,6 +445,20 @@
                 if (calculatedHeight > dimensions.height) {
                     dimensions.height = calculatedHeight;
                 }
+            }
+
+            for (let i in hallwayPoints) {
+                let currentWidth = hallwayPoints[i].x;
+                let currentHeight = hallwayPoints[i].y;
+
+                if (currentWidth > dimensions.width) {
+                    dimensions.width = currentWidth;
+                }
+
+                if (currentHeight > dimensions.height) {
+                    dimensions.height = currentHeight;
+                }
+
             }
 
             return dimensions;
