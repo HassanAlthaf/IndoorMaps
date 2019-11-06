@@ -14,7 +14,7 @@ I have published this package on NPM [here](https://www.npmjs.com/package/@hassa
 
 You need to include the `src/indoormaps.js` into your HTML document.
 
-##Configuration
+## Configuration
 ```javascript
 var indoorMaps = indoorMaps({
     config: {
