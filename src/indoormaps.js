@@ -9,8 +9,9 @@
 
     let currentZIndex = 0;
     let validZIndexes = [0];
+    let showHallwayPoints = false;
 
-    let svgDimensions = {};
+    //let svgDimensions = {};
 
     let floorPlan = [];
 
@@ -20,15 +21,10 @@
         this.parseConfiguration(options || {});
         this.parseFloorPlan(options.floorSections || {});
         this.parseHallwayPoints(options.hallway || {});
-        // Loop through everything and find max width/height required.
 
-        svgDimensions = this.calculateSVGWidthAndHeight();
+        //svgDimensions = this.calculateSVGWidthAndHeight();
 
-        // Creating the root SVG Node on DOM.
         svgRootNode = this.createSvgNode("svg", {
-            /*
-            width: svgDimensions.width + 5, // max width from above
-            height: svgDimensions.height + 5, // max height from above*/
             width: '100%',
             height: '100%'
         });
@@ -38,19 +34,10 @@
         // Render the Map
         this.drawMap(floorPlan[currentZIndex] || {});
 
-        // Parsing
+        if (showHallwayPoints) {
+            this.displayHallwayPoints(options.hallway || {});
+        }
 
-        this.displayHallwayPoints(options.hallway || {});
-
-        // Pathfinding
-
-        /*
-        let paths = this.findPaths(52, 53);
-
-        let shortestPath = this.findShortestPath(paths);
-
-        this.drawPath(shortestPath);
-        */
         return svgRootNode;
     };
 
@@ -93,8 +80,8 @@
                 let attributes = {
                     x: coordinates.x,
                     y: coordinates.y,
-                    width: coordinates.width || 3,
-                    height: coordinates.height || 3,
+                    width: coordinates.width || 0,
+                    height: coordinates.height || 0,
                     fill: "#FF0000"
                 };
 
@@ -260,8 +247,6 @@
                     })
                 );
             }
-
-
         },
         findPaths: function (startId, endId) {
             let paths = [];
@@ -317,8 +302,6 @@
                 var newPath = path.slice();
                 newPath.push(nextPoint);
 
-                //console.log(nextPoint.id);
-
                 results = results.concat(this.recursiveIterationOfPoints(newPath, end));
             }
 
@@ -341,15 +324,6 @@
                     return validDoors[id].actual;
                 }
             }
-            /*
-            for (let id in doors) {
-
-                for (let i = 0; i < doors[id].length; i++) {
-                    if (doors[id][i].x === coordinates.x && doors[id][i].y === coordinates.y) {
-                        return doors[id][i].actual;
-                    }
-                }
-            }*/
         },
         parseHallwayPoints: function (points) {
             for (let i = 0; i < points.length; i++) {
@@ -400,6 +374,7 @@
         parseConfiguration: function (options) {
             currentZIndex = options.config.defaultZIndex || 0;
             validZIndexes = options.config.validZIndexes || [0];
+            showHallwayPoints = options.config.showHallwayPoints || false;
         },
 
         parseFloorPlan: function (floorLayout) {
