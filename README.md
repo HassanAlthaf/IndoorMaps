@@ -13,8 +13,9 @@ I have published this package on NPM [here](https://www.npmjs.com/package/@hassa
 `npm i @hassanalthaf/indoormaps`
 
 You need to include the `src/indoormaps.js` into your HTML document.
+
 ##Configuration
-```
+```javascript
 var indoorMaps = indoorMaps({
     config: {
         defaultZIndex: 0, // Current Floor
